@@ -13,6 +13,12 @@
         <vaadin.version>8.0.0.alpha2</vaadin.version>
         <vaadin.plugin.version>${vaadin.version}</vaadin.plugin.version>
 	</properties>
+	<properties>
+  <sonar.projectKey>GaneshBabu-J_GitHub-Ramco-Demo</sonar.projectKey>
+  <sonar.organization>ganeshbabu-j</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  <sonar.login>0b788f13237e170de845da43e1608b2729fe48b6</sonar.login>
+</properties>
     
     <repositories>
         <repository>
