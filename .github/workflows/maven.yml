@@ -19,7 +19,9 @@ jobs:
     - name: Testing with Maven
       run: mvn test  
     - name: CoverageChecks with Maven
-      run: mvn cobertura:cobertura -Dcobertura.report.format=xml  
+      run: mvn cobertura:cobertura -Dcobertura.report.format=xml
+    - name: Sonar Verify
+      run: mvn verify sonar:sonar  
     - name: Build with Maven
       run: mvn package
   sonar:
