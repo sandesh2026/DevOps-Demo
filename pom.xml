@@ -15,7 +15,7 @@
   <sonar.projectKey>GaneshBabu-J_GitHub-Ramco-Demo</sonar.projectKey>
   <sonar.organization>ganeshbabu-j</sonar.organization>
   <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-  <sonar.login>0b788f13237e170de845da43e1608b2729fe48b6</sonar.login>
+  <sonar.login>${{ secrets.SONAR_KEY }}</sonar.login>
 </properties>
     
     <repositories>
