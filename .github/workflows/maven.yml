@@ -25,11 +25,11 @@ jobs:
     - name: Build with Maven
       run: mvn package
   
-  deploy:
-    runs-on: ubuntu-latest
-    name: Docker push
-    needs: [build]
-    steps:
+  #deploy:
+  #  runs-on: ubuntu-latest
+   # name: Docker push
+   # needs: [build]
+   # steps:
     - uses: actions/checkout@v1
     - name: Copy war file
       run: cp /home/runner/work/GitHub-Ramco-Demo/GitHub-Ramco-Demo/target/addressbook.war .
