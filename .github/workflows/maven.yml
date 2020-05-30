@@ -34,7 +34,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag 8884691005/abook:12
     - name: Docker credentials
-      run: docker login --username 8884691005 --password ${secret.DOCKER_SECRET}  
+      run: docker login --username 8884691005 --password ${secrets.DOCKER_SECRET}  
     - name: Pushing the image on DockerHub
       run: docker push 8884691005/abook:12
         
