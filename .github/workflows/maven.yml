@@ -31,6 +31,8 @@ jobs:
     needs: [build]
     steps:
     - uses: actions/checkout@v1
+    - name: Copy war file
+      run: cp /home/runner/work/GitHub-Ramco-Demo/GitHub-Ramco-Demo/target/addressbook.war .
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag 8884691005/abook:12
     - name: Docker credentials
