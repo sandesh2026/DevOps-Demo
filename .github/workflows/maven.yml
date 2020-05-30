@@ -30,7 +30,7 @@ jobs:
    # name: Docker push
    # needs: [build]
    # steps:
-    - uses: actions/checkout@v1
+  #  - uses: actions/checkout@v1
     - name: Copy war file
       run: cp /home/runner/work/GitHub-Ramco-Demo/GitHub-Ramco-Demo/target/addressbook.war .
     - name: Build the Docker image
