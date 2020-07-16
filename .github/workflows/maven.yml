@@ -32,7 +32,7 @@ jobs:
    # steps:
   #  - uses: actions/checkout@v1
     - name: Copy war file
-      run: cp /home/runner/work/DevTools-India/DevOps-Demo/target/addressbook.war .
+      run: cp /home/runner/work/DevOps-Demo/DevOps-Demo/target/addressbook.war .
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag devopsdemo:0.1
     - name: Docker credentials
