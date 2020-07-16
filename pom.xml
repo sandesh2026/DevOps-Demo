@@ -540,6 +540,13 @@
             </reporting>
         </profile>
     </profiles>
+    <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>DevOps Demo Apache Maven Packages</name>
+	    <url>https://maven.pkg.github.com/DevTools-India/DevOps-Demo</url>
+    </repository>
+  </distributionManagement>
 	
 </project>
 
