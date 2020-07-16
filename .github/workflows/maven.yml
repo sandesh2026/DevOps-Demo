@@ -32,13 +32,13 @@ jobs:
    # steps:
   #  - uses: actions/checkout@v1
     - name: Copy war file
-      run: cp /home/runner/work/GitHub-Ramco-Demo/GitHub-Ramco-Demo/target/addressbook.war .
+      run: cp /home/runner/work/DevTools-India/DevOps-Demo/target/addressbook.war .
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag 8884691005/abook:12
+      run: docker build . --file Dockerfile --tag devopsdemo:0.1
     - name: Docker credentials
-      run: docker login --username 8884691005 --password ${{secrets.DOCKER_SECRET}} 
+      run: docker login --username vishwasnm2 --password ${{secrets.DOCKERHUB_AUTH}} 
     - name: Pushing the image on DockerHub
-      run: docker push 8884691005/abook:12
+      run: docker push vishwasnm2/devopsdemo:0.1
         
   sonar:
     name: Test - SonarCloud Scan
@@ -52,9 +52,9 @@ jobs:
         with:
           java-version: 1.8
       - name: SonarCloud Scan
-        run: mvn -B clean verify -Psonar -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+        run: mvn -B clean verify -Psonar -Dsonar.login=${{ secrets.SONAR_KEY }}
         env:
-          GITHUB_TOKEN: ${{ secrets.GANESHJ }}
+          GITHUB_TOKEN: ${{ secrets.GHE_AUTH }}
   aritifacts:             
     name: Publish Maven Artifacts
     runs-on: ubuntu-latest
@@ -69,4 +69,4 @@ jobs:
       - name: Publish artifact on GitHub Packages
         run: mvn deploy
         env:
-         GITHUB_TOKEN: ${{secrets.GANESHJ}}  #npm_token
+         GITHUB_TOKEN: ${{secrets.GHE_AUTH}}  #npm_token
